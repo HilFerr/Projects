@@ -17,18 +17,26 @@ NOTE: This list is subject to change.
 
 To install this game click right here !Download (link)
 
-## Usage
+## C++
 
-Provide instructions and examples for use. Include screenshots as needed. 
+### Connect 4
 
-## Contributing
+#### Installation
 
-If you want other people to contribute, this is the place to provide instructions on how they can do so. 
+Follow the steps to install and run this program.
 
-## Credits
+1. Download the files here;
+2. Upload them to your favorite IDE: File > Open > Connect 4.cpp;
+3. Execute the file and play.
 
-List your team members or if it's a personal project, just yourself. You can also provide links to your contributors' GitHub profiles.
+#### Gameplay
 
-## License
+How the game should run:
 
-Include a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use https://choosealicense.com/
+1. Ask the user for a language, either Portuguese or English;
+2. Ask the user for the username for both player;
+3. Ask the player 1 for their symbol (X or O);
+4. Show the Game Board and allow the player to play;
+5. Once a player connect's 4 the game should end, with the player that connected being the winner.
+
+Have fun!
