@@ -24,7 +24,7 @@ jobs:
       - name: Readme Download Button Action
         env:
           GITHUB_USER: "HilFerr"
-          REPO: "Projects"
+          REPO: "HilFerr/Projects"
           FORMAT: "zip"
           VERSION: "${{ steps.get-latest-release.outputs.tag_name }}"
           COLOR: "white"
