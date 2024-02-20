@@ -15,7 +15,10 @@ NOTE: This list is subject to change.
 
 #### Installation
 
-To install this game click right here !Download (link)
+To install this game click right here:
+
+<!-- BEGIN LATEST DOWNLOAD BUTTON -->
+<!-- END LATEST DOWNLOAD BUTTON -->
 
 ## C++
 
@@ -25,7 +28,11 @@ To install this game click right here !Download (link)
 
 Follow the steps to install and run this program.
 
-1. Download the files here;
+1. Download the files here:
+
+<!-- BEGIN LATEST DOWNLOAD BUTTON -->
+<!-- END LATEST DOWNLOAD BUTTON -->
+  
 2. Upload them to your favorite IDE: File > Open > Connect 4.cpp;
 3. Execute the file and play.
 
@@ -36,10 +43,10 @@ Follow the steps to install and run this program.
 How the game should run:
 
 1. Ask the user for a language, either Portuguese or English;
-3. Ask the user for the username for both player;
-4. Ask the player 1 for their symbol (X or O);
-5. Show the Game Board and allow the player to play;
-6. Once a player connect's 4 the game should end, with the player that connected being the winner.
+2. Ask the user for the username for both player;
+3. Ask the player 1 for their symbol (X or O);
+4. Show the Game Board and allow the player to play;
+5. Once a player connect's 4 the game should end, with the player that connected being the winner.
 
 ##### Version 1.1
 
