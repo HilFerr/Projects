@@ -21,6 +21,20 @@ NOTE: This list is subject to change.
 
 ## Exercises
 
+### Exercise 1
+
+#### Description
+
+Simple code that adds a number to the previously written number.
+
+#### Installation
+
+1. Download the files [here]().
+2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
+3. Execute the file and play.
+
+---------------------------------------------------------------------------------
+
 ### Simple Calculator
 
 #### Description
