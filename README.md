@@ -9,30 +9,56 @@ They'll also be separated by programming languages. Such as:
 
 NOTE: This list is subject to change.
 
-## HTML
+# HTML
 
 ### Tic Tac Toe
 
 #### Installation
 
-To install this game click right here:
+1. Install this game click right here.
 
-<!-- BEGIN LATEST DOWNLOAD BUTTON -->
-<!-- END LATEST DOWNLOAD BUTTON -->
+# C++
 
-## C++
+## Exercises
 
-### Connect 4
+### Simple Calculator
+
+#### Description
+
+Simples calculator, made with C++, that can only calculate with 2 number. It can add, subtract, multiply, divide and elevate to the of another number.
 
 #### Installation
 
 Follow the steps to install and run this program.
 
-1. Download the files here:
+1. Download the files here.
+2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
+3. Execute the file and play.
 
-<!-- BEGIN LATEST DOWNLOAD BUTTON -->
-<!-- END LATEST DOWNLOAD BUTTON -->
-  
+#### Gameplay
+
+##### Version 1.0
+
+How the game should run:
+
+1. Ask the user what operation they want to do;
+2. Ask what is the first number;
+3. Ask what is the second number;
+4. Finally, print the answer to the simple calculous;
+
+### Connect 4
+
+#### Description
+
+The classic board game Connect 4 made using C++, this program owns 2 gamemodes, PvP and PvAI.
+In the PvP mode, 2 players play against each other.
+While in the PvAI, 1 player plays against the computer.
+
+#### Installation
+
+Follow the steps to install and run this program.
+
+1. Download the files here.
 2. Upload them to your favorite IDE: File > Open > Connect 4.cpp;
 3. Execute the file and play.
 
