@@ -76,7 +76,7 @@ While in the PvAI, 1 player plays against the computer.
 
 Follow the steps to install and run this program.
 
-1. Download the files here.
+1. Download the files [here](C++/Connect4.cpp) by clicking the donwload button on the top right corner of the screen.
 2. Upload them to your favorite IDE: File > Open > Connect 4.cpp;
 3. Execute the file and play.
 
