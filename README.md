@@ -21,6 +21,10 @@ NOTE: This list is subject to change.
 
 ## Exercises
 
+#### Description
+
+Exercises are just exercises made in class, to prove knowledge.
+
 ### Exercise 1
 
 #### Description
@@ -32,6 +36,17 @@ Simple code that adds a number to the previously written number.
 1. Download the file [here](C++/Exercises/Exercise1.cpp) by clicking the download button on the top right corner of the screen.
 2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
 3. Execute the file and play.
+
+#### Execution
+
+##### Version 1.0
+
+How the program should run:
+
+1. Ask the user what number they want to add to 0;
+2. Depending on the number inputted, the number presented will change;
+3. Add the second number to the first number;
+4. Repeat, until the user closes the program;
 
 ---------------------------------------------------------------------------------
 
