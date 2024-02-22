@@ -29,7 +29,7 @@ Exercises are just exercises, made in class, to prove knowledge.
 
 #### Description
 
-Simple code that adds a number to the previously written number.
+Simple loop that adds a number to the previously written number.
 
 #### Installation
 
