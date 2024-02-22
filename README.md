@@ -46,6 +46,8 @@ How the game should run:
 3. Ask what is the second number;
 4. Finally, print the answer to the simple calculous;
 
+
+
 ### Connect 4
 
 #### Description
