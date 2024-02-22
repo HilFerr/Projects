@@ -29,7 +29,7 @@ Simple code that adds a number to the previously written number.
 
 #### Installation
 
-1. Download the file [here](C++/Exercises/ex2/ex2.cpp) by clicking the donwload button on the top right corner of the screen.
+1. Download the file [here](C++/Exercises/ex2/ex2.cpp) by clicking the download button on the top right corner of the screen.
 2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
 3. Execute the file and play.
 
@@ -45,7 +45,7 @@ Simples calculator, made with C++, that can only calculate with 2 number. It can
 
 Follow the steps to install and run this program.
 
-1. Download the files [here](C++/Exercises/SimpleCalculator.cpp) by clicking the donwload button on the top right corner of the screen.
+1. Download the files [here](C++/Exercises/SimpleCalculator.cpp) by clicking the download button on the top right corner of the screen.
 2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
 3. Execute the file and play.
 
@@ -76,7 +76,7 @@ While in the PvAI, 1 player plays against the computer.
 
 Follow the steps to install and run this program.
 
-1. Download the files [here](C++/Connect4.cpp) by clicking the donwload button on the top right corner of the screen.
+1. Download the files [here](C++/Connect4.cpp) by clicking the download button on the top right corner of the screen.
 2. Upload them to your favorite IDE: File > Open > Connect 4.cpp;
 3. Execute the file and play.
 
