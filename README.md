@@ -23,7 +23,7 @@ NOTE: This list is subject to change.
 
 #### Description
 
-Exercises are just exercises made in class, to prove knowledge.
+Exercises are just exercises, made in class, to prove knowledge.
 
 ### Exercise 1
 
