@@ -120,7 +120,7 @@ int main() {
 
             system("cls"); // LIMPA TELA
 
-            // CICLO DE DEFINIÇÃO DOS SIMBOLOS DO JOGADORES
+            // CICLO DE DEFINIÇÃO DOS SIMBOLOS DOS JOGADORES
             do {
                 cout << "\n" << player1 << ", escolha X ou O: ";
                 cin >> symbol1;
