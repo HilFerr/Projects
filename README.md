@@ -7,7 +7,7 @@ They'll also be separated by programming languages. Such as:
   - HTML
   - C++
 
-#####NOTE: This list is subject to change.
+####NOTE: This list is subject to change.
 
 # HTML
 
