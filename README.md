@@ -7,7 +7,7 @@ They'll also be separated by programming languages. Such as:
   - HTML
   - C++
 
-####NOTE: This list is subject to change.
+##### NOTE: This list is subject to change.
 
 # HTML
 
@@ -37,12 +37,12 @@ Simple loop that adds a number to the previously written number.
 
 1. Download the file [here](C++/Exercises/Exercise1/Exercise1.cpp) if you want to see the code;
 2. Upload them to your favorite IDE: File > Open > exercise1.cpp;
-3. Execute the file and play.
+3. Execute the file.
 
 #### .exe file
 
-1. Download the file [here](C++/Exercises/Exercise1/Exercise1.exe) if you want to see the code;
-2. Execute the file and play.
+1. Download the file [here](C++/Exercises/Exercise1/Exercise1.exe) if you just want to execute the program;
+2. Execute the file.
 
 #### Execution
 
@@ -53,7 +53,7 @@ How the program should run:
 1. Ask the user what number they want to add to 0;
 2. Depending on the number inputted, the number presented will change;
 3. Add the second number to the first number;
-4. Repeat, until the user closes the program;
+4. Repeat, until the user closes the program or inputs an non-integer character;
 
 ---------------------------------------------------------------------------------
 
@@ -61,21 +61,24 @@ How the program should run:
 
 #### Description
 
-Simples calculator, made with C++, that can only calculate with 2 number. It can add, subtract, multiply, divide and elevate to the of another number.
+Simple calculator, made with C++, that can only calculate with 2 number. It can add, subtract, multiply, divide and elevate to the of another number.
 
-#### Installation
+#### Code
 
-Follow the steps to install and run this program.
+1. Download the file [here](C++/Exercises/SimpleCalculator.cpp) if you want to see the code;
+2. Upload them to your favorite IDE: File > Open > SimpleCalculator.cpp;
+3. Execute the file.
 
-1. Download the files [here](C++/Exercises/SimpleCalculator.cpp) by clicking the download button on the top right corner of the screen.
-2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
-3. Execute the file and play.
+#### .exe file
 
-#### Gameplay
+1. Download the file [here](IPHERE) if you just want to execute the program;
+2. Execute the file.
+
+#### Execution
 
 ##### Version 1.0
 
-How the game should run:
+How the program should run:
 
 1. Ask the user what operation they want to do;
 2. Ask what is the first number;
