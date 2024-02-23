@@ -6,8 +6,7 @@ using namespace std;
 int main() {
 
     // VARIABLES
-    string name;
-    string sirname;
+    string name, sirname, username;
 
     cout << "What's your name? ";
     cin >> name;
@@ -20,6 +19,10 @@ int main() {
     cout << "With your sirname, " << sirname << ", we have " << sirname[0] << " as the first letter." << endl;
     cout << "With your name, " << name << ", we have " << name[0] << " as the first letter." << endl;
     cout << "So, you'll be called " << name[0] << sirname[0] << "." << endl;
+
+    username = name[0] + sirname[0];
+
+    cout << "Welcome back, " << username << "!";
 
     return 0;
 }
