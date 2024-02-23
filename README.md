@@ -5,7 +5,7 @@
 Inside this repository that are every game that I've worked on, aswell as informations on how install them and run them.
 They'll also be separated by programming languages. Such as:
   - HTML
-  - c++
+  - C++
 
 NOTE: This list is subject to change.
 
