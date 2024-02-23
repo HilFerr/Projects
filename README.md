@@ -33,10 +33,18 @@ Simple loop that adds a number to the previously written number.
 
 #### Installation
 
-1. Download the file [here](C++/Exercises/Exercise1.cpp) by clicking the download button on the top right corner of the screen.
-2. Upload them to your favorite IDE: File > Open > Calculator.cpp;
+#### Code
+
+1. Download the file [here](C++/Exercises/Exercise1/Exercise1.cpp) if you want to see the code;
+2. Upload them to your favorite IDE: File > Open > exercise1.cpp;
 3. Execute the file and play.
 
+#### .exe file
+
+1. Download the file [here](C++/Exercises/Exercise1/Exercise1.exe) if you want to see the code;
+2. Execute the file and play.
+
+[here](C++/Exercises/Exercise1.cpp)
 #### Execution
 
 ##### Version 1.0
