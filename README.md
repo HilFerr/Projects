@@ -44,7 +44,6 @@ Simple loop that adds a number to the previously written number.
 1. Download the file [here](C++/Exercises/Exercise1/Exercise1.exe) if you want to see the code;
 2. Execute the file and play.
 
-[here](C++/Exercises/Exercise1.cpp)
 #### Execution
 
 ##### Version 1.0
