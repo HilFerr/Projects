@@ -1,0 +1,330 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+#include <ctime>
+
+using namespace std;
+
+// VARIÁVEIS QUE EXIBEM O TOTAL DE MÓDULOS POR DISCIPLINA
+
+const int numModulosPT = 3;
+const int numModulosING = 3;
+const int numModulosAI = 2;
+const int numModulosTIC = 4;
+const int numModulosEF = 6;
+const int numModulosFQ = 6;
+const int numModulosMAT = 3;
+const int numModulosRE = 2;
+const int numModulosPRO = 7;
+const int numModulosEMR = 1;
+
+struct areas {
+    string areaNome;
+    string moduloNome[20];
+    int moduloNota[20];
+};
+
+//////////////////////////////////////////////////////////////////// FUNÇÕES ////////////////////////////////////////////////////////////////////
+
+void mostramodulos(areas x, int numModulos) {
+    for (int i = 0; i < numModulos; i++) {
+        cout << x.moduloNome[i] << endl;
+    }
+}
+
+////////////////////////////////////////////////////// MÉDIA TOTAL //////////////////////////////////////////////////////
+
+float mediaPT(areas notasPT) {
+    int notasModulos = 0;
+    int modulos = 0;
+
+    for (int i = 0; i < numModulosPT; i++) {
+        if (notasPT.moduloNota[i] >= 10) {
+            notasModulos += notasPT.moduloNota[i];
+            modulos++;
+        }
+    }
+
+    if (modulos > 0) {
+        return (float)notasModulos / modulos;
+    }
+    else {
+        cout << "No valid module notes were found. Please enter a valid note (10 or above)." << endl;
+        return -1;
+    }
+}
+
+float mediaING(areas notasING) {
+    int notasModulos = 0;
+    int modulos = 0;
+
+    for (int i = 0; i < numModulosING; i++) {
+        if (notasING.moduloNota[i] >= 10) {
+            notasModulos += notasING.moduloNota[i];
+            modulos++;
+        }
+    }
+
+    if (modulos > 0) {
+        return (float)notasModulos / modulos;
+    }
+    else {
+        cout << "No valid module notes were found. Please enter a valid note (10 or above)." << endl;
+        return -1;
+    }
+}
+
+int main() {
+
+//////////////////////////////////////////////////////////// ÍNICIO DA BASE DE DADOS ////////////////////////////////////////////////////////////
+
+    areas notasPT;
+    areas notasING;
+    areas notasAI;
+    areas notasTIC;
+    areas notasEF;
+    areas notasFQ;
+    areas notasMAT;
+    areas notasMA;
+    areas notasRE;
+    areas notasPRO;
+    areas notasEMR;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////// PORTUGUÊS ///////////////////////////////////////////////////
+
+    notasPT.areaNome = "PORTUGUES";
+
+    notasPT.moduloNome[0] = "MODULO 1";
+    notasPT.moduloNome[1] = "MODULO 2";
+    notasPT.moduloNome[2] = "MODULO 3";
+
+    notasPT.moduloNota[0] = 10;
+    notasPT.moduloNota[1] = 12;
+    notasPT.moduloNota[2] = 0;
+
+    /////////////////////////////////////////////////// INGLÊS /////////////////////////////////////////////////////
+
+    notasING.areaNome = "INGLES";
+
+    notasING.moduloNome[0] = "EU E O MUNDO PROFISSIONAL";
+    notasING.moduloNome[1] = "UM MUNDO DE MUITAS LINGUAS";
+    notasING.moduloNome[2] = "O MUNDO TECNOLOGICO";
+
+    notasING.moduloNota[0] = 18;
+    notasING.moduloNota[1] = 0;
+    notasING.moduloNota[2] = 0;
+
+    ////////////////////////////////////////////// ÁREA DE INTEGRAÇÃO //////////////////////////////////////////////
+
+    notasAI.areaNome = "AREA DE INTEGRACAO";
+
+    notasAI.moduloNome[0] = "MODULO 1";
+    notasAI.moduloNome[1] = "MODULO 2";
+
+    notasAI.moduloNota[0] = 0;
+    notasAI.moduloNota[1] = 0;
+
+    /////////////////////////////////// TECNOLOGIAS DE INFORMAÇÃO E COMUNICAÇÃO ////////////////////////////////////
+
+    notasTIC.areaNome = "TECNOLOGIAS DE INFORMACAO E COMUNICACAO";
+
+    notasTIC.moduloNome[0] = "PESQUISAR, FILTRAR E ESTRUTURAR INFORMACAO E CONTEUDOS EM AMBIENTES DIGITAIS";
+    notasTIC.moduloNome[1] = "ORGANIZACAO E TRATAMENTO DE DADOS";
+    notasTIC.moduloNome[2] = "EDICAO DE SOM E VIDEO";
+    notasTIC.moduloNome[3] = "INTRODUCAO A MODELACAO 3D";
+
+    notasTIC.moduloNota[0] = 0;
+    notasTIC.moduloNota[1] = 0;
+    notasTIC.moduloNota[2] = 0;
+    notasTIC.moduloNota[3] = 14;
+
+    /////////////////////////////////////////////// EDUCAÇÃO FÍSICA ////////////////////////////////////////////////
+
+    notasEF.areaNome = "EDUCACAO FISICA";
+
+    notasEF.moduloNome[0] = "JOGOS DESPORTIVOS COLETIVOS I";
+    notasEF.moduloNome[1] = "GINASTICA I";
+    notasEF.moduloNome[2] = "ATLETISMO / RAQUETAS / PATINAGEM I";
+    notasEF.moduloNome[3] = "DANCA I";
+    notasEF.moduloNome[4] = "APTIDAO FISICA";
+    notasEF.moduloNome[5] = "ATIVIDADES FISICAS / CONTEXTOS E SAUDE I";
+
+    notasEF.moduloNota[0] = 15;
+    notasEF.moduloNota[1] = 0;
+    notasEF.moduloNota[2] = 0;
+    notasEF.moduloNota[3] = 0;
+    notasEF.moduloNota[4] = 0;
+    notasEF.moduloNota[5] = 0;
+
+    ////////////////////////////////////////////// FÍSICA E QUÍMICA ////////////////////////////////////////////////
+
+    notasFQ.areaNome = "FISICA E QUIMICA";
+
+    notasFQ.moduloNome[0] = "FORCAS E MOVIMENTOS";
+    notasFQ.moduloNome[1] = "ESTATICA";
+    notasFQ.moduloNome[2] = "HIDROSTATICA E HIDRODINAMICA";
+    notasFQ.moduloNome[3] = "LUZ E FONTES DE LUZ";
+    notasFQ.moduloNome[4] = "OTICA GEOMETRICA";
+    notasFQ.moduloNome[5] = "CIRCUITOS ELETRICOS";
+
+    notasFQ.moduloNota[0] = 15;
+    notasFQ.moduloNota[1] = 10;
+    notasFQ.moduloNota[2] = 12;
+    notasFQ.moduloNota[3] = 0;
+    notasFQ.moduloNota[4] = 0;
+    notasFQ.moduloNota[5] = 0;
+
+    ///////////////////////////////////////////////// MATEMÁTICA ///////////////////////////////////////////////////
+
+    notasMAT.areaNome = "MATEMATICA";
+
+    notasMAT.moduloNome[0] = "GEOMETRIA";
+    notasMAT.moduloNome[1] = "FUNCOES POLINOMIAIS";
+    notasMAT.moduloNome[2] = "ESTATISTICA";
+
+    notasMAT.moduloNota[0] = 0;
+    notasMAT.moduloNota[1] = 0;
+    notasMAT.moduloNota[2] = 13;
+
+    //////////////////////////////////////// MICROPROCESSADORES E AUTOMAÇÃO ////////////////////////////////////////
+
+    notasMA.areaNome = "MICROPROCESSADORES E AUTOMACAO";
+
+    notasMA.moduloNome[0] = "DISPOSITIVOS E PERIFERICOS";
+    notasMA.moduloNome[1] = "SISTEMAS OPERATIVOS - TIPOLOGIAS";
+    notasMA.moduloNome[2] = "UTILITARIOS";
+    notasMA.moduloNome[3] = "INFORMATICA - NOCOES BASICAS";
+
+    notasMA.moduloNota[0] = 14;
+    notasMA.moduloNota[1] = 15;
+    notasMA.moduloNota[2] = 0;
+    notasMA.moduloNota[3] = 0;
+
+    ////////////////////////////////////////////////////// REDES ///////////////////////////////////////////////////
+
+    notasRE.areaNome = "REDES";
+
+    notasRE.moduloNome[0] = "CONEXOES DE REDE";
+    notasRE.moduloNome[1] = "SISTEMAS DE REDE LOCAL";
+
+    notasRE.moduloNota[0] = 16;
+    notasRE.moduloNota[1] = 0;
+
+    /////////////////////////////////////////////////// PROGRAMAÇÃO ////////////////////////////////////////////////
+
+    notasPRO.areaNome = "PROGRAMACAO";
+
+    notasPRO.moduloNome[0] = "ALGORITMOS";
+    notasPRO.moduloNome[1] = "ESTRUTURAS DE DADOS";
+    notasPRO.moduloNome[2] = "PRINCIPIOS METODOLOGICOS DE PROGRAMACAO";
+    notasPRO.moduloNome[3] = "PROGRAMACAO EM C/C++ - FUNDAMENTOS";
+    notasPRO.moduloNome[4] = "PROGRAMACAO EM C/C++ - AVANCADA";
+    notasPRO.moduloNome[5] = "PROGRAMACAO DE SISTEMAS DISTRIBUIDOS - JAVA";
+    notasPRO.moduloNome[6] = "DESENVOLVIMENTO DE APLICACOES WEB EM JAVA";
+
+    notasPRO.moduloNota[0] = 14;
+    notasPRO.moduloNota[1] = 16;
+    notasPRO.moduloNota[2] = 16;
+    notasPRO.moduloNota[3] = 15;
+    notasPRO.moduloNota[4] = 0;
+    notasPRO.moduloNota[5] = 0;
+    notasPRO.moduloNota[6] = 0;
+
+    //////////////////////////////////////////// EDUCAÇÃO MORAL RELIGIOSA //////////////////////////////////////////
+
+    notasEMR.areaNome = "EDUCACAO MORAL RELIGIOSA";
+
+    notasEMR.moduloNome[0] = "MODULO 1";
+
+    notasEMR.moduloNota[0] = 0;
+
+//////////////////////////////////////////////////////////// FIM DA BASE DE DADOS ////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////// VARIÁVEIS //////////////////////////////////////////////////////////////////
+
+    /////////////////////////// OPERAÇÕES //////////////////////////
+
+    int op1;
+    int op2;
+
+    //////////////////////////// MÉDIAS ////////////////////////////
+
+    float media_PT = mediaPT(notasPT);
+    float media_ING = mediaING(notasING);
+
+///////////////////////////////////////////////////////////// MENU DE OPERAÇÕES //////////////////////////////////////////////////////////////
+
+    do {
+        cout << "INOVAR 2.0" << endl << endl;
+        cout << "QUE OPERACAO PRETENDE REALIZAR?" << endl;
+
+        cout << "1 - MEDIA;" << endl;
+        cout << "QUE OPERACAO PRETENDE REALIZAR?" << endl;
+        cout << "QUE OPERACAO PRETENDE REALIZAR?" << endl;
+        cout << "QUE OPERACAO PRETENDE REALIZAR?" << endl;
+        cout << "QUE OPERACAO PRETENDE REALIZAR?" << endl;
+
+        cout << "R: ";
+        cin >> op1;
+
+        switch (op1) {
+            case 1:
+                do {
+                    cout << "MÉDIA:" << endl << endl;
+
+                    cout << " 0 - VOLTAR;" << endl << endl;
+                    cout << " 1 - TODAS;" << endl;
+                    cout << " 2 - PORTUGUES;" << endl;
+                    cout << " 3 - INGLES;" << endl;
+                    cout << " 4 - AREA DE INTEGRACAO;" << endl;
+                    cout << " 5 - TECNOLOGIAS DE INFORMACAO E COMUNICACAO;" << endl;
+                    cout << " 6 - EDUCACAO FISICA;" << endl;
+                    cout << " 7 - FISICA E QUIMICA;" << endl;
+                    cout << " 8 - MATEMATICA;" << endl;
+                    cout << " 9 - MICROPROCESSADORES E AUTOMACAO;" << endl;
+                    cout << "10 - REDES;" << endl;
+                    cout << "11 - PROGRAMACAO;" << endl;
+                    cout << "12 - EDUCACAO MORAL RELIGIOSA;" << endl << endl;
+
+                    cout << "R: ";
+                    cin >> op2;
+
+                    switch (op2) {
+
+                    ////////////////////////////////// VOLTAR /////////////////////////////////
+                    case 0:
+                        return 0;
+
+                    ////////////////////////////// TODAS AS MEDIAS ////////////////////////////
+                    case 1:
+                    // TODAS AS MEDIAS
+
+                    //////////////////////////// MEDIA DE PORTUGUES ///////////////////////////
+                    case 2:
+                        system("cls");
+
+                        if (media_PT >= 0) {
+                            cout << "MEDIA DE PORTUGUES: " << media_PT << endl;
+                        }
+
+                    ///////////////////////////// MEDIA DE INGLES /////////////////////////////
+                    case 3:
+                        system("cls");
+
+                        if (media_ING >= 0) {
+                            cout << "MEDIA DE INGLES: " << media_ING << endl;
+                        }
+                    }
+             
+                } while (op2 != 0);
+        }
+
+    } while (op1 != 0);
+
+    return 0;
+}
