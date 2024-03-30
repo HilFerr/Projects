@@ -8,7 +8,12 @@
 
 using namespace std;
 
-// VARIÁVEIS QUE EXIBEM O TOTAL DE MÓDULOS POR DISCIPLINA
+/////////////////////////// OPERAÇÕES //////////////////////////
+
+int op1;
+int op2;
+
+////////////////// NÚMERO DE MODULOS/DISCIPLINA ////////////////
 
 const int numModulosPT = 3;
 const int numModulosING = 3;
@@ -21,13 +26,15 @@ const int numModulosRE = 2;
 const int numModulosPRO = 7;
 const int numModulosEMR = 1;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 struct areas {
     string areaNome;
     string moduloNome[20];
     int moduloNota[20];
 };
 
-//////////////////////////////////////////////////////////////////// FUNÇÕES ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////// FUNÇÕES ///////////////////////////////////////////////////////////////////
 
 void mostramodulos(areas x, int numModulos) {
     for (int i = 0; i < numModulos; i++) {
@@ -35,8 +42,52 @@ void mostramodulos(areas x, int numModulos) {
     }
 }
 
-////////////////////////////////////////////////////// MÉDIA TOTAL //////////////////////////////////////////////////////
+///////////////////////////////////////////////////////// MÉDIA /////////////////////////////////////////////////////////
 
+float media(areas notasPT, areas notasING, areas notasAI, areas notasTIC, areas notasEF, areas notasFQ, areas notasMAT, areas notasMA, areas notasRE, areas notasPRO, areas notasEMR) {
+    int notasModulos = 0;
+    int modulos = 0;
+
+    ////////////////////// MEDIA DE PORTUGUÊS //////////////////////
+    if (op2 == 2) {
+        for (int i = 0; i < numModulosPT; i++) {
+            if (notasPT.moduloNota[i] >= 10) {
+                notasModulos += notasPT.moduloNota[i];
+                modulos++;
+            }
+        }
+
+        if (modulos > 0) {
+            return (float)notasModulos / modulos;
+        }
+        else {
+            cout << "IMPOSSIVEL REALIZAR A MEDIA." << endl;
+            return -1;
+        }
+    }
+
+    /////////////////////// MEDIA DE INGLÊS ////////////////////////
+    else if (op2 == 3) {
+        for (int i = 0; i < numModulosING; i++) {
+            if (notasING.moduloNota[i] >= 10) {
+                notasModulos += notasING.moduloNota[i];
+                modulos++;
+            }
+        }
+
+        if (modulos > 0) {
+            return (float)notasModulos / modulos;
+        }
+        else {
+            cout << "IMPOSSIVEL REALIZAR A MEDIA." << endl;
+            return -1;
+        }
+    }
+
+    return 0;
+}
+
+/*
 float mediaPT(areas notasPT) {
     int notasModulos = 0;
     int modulos = 0;
@@ -76,10 +127,11 @@ float mediaING(areas notasING) {
         return -1;
     }
 }
+*/
 
 int main() {
 
-//////////////////////////////////////////////////////////// ÍNICIO DA BASE DE DADOS ////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////// ÍNICIO DA BASE DE DADOS ////////////////////////////////////////////////////////////
 
     areas notasPT;
     areas notasING;
@@ -93,7 +145,7 @@ int main() {
     areas notasPRO;
     areas notasEMR;
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////// PORTUGUÊS ///////////////////////////////////////////////////
 
@@ -243,21 +295,14 @@ int main() {
 
     notasEMR.moduloNota[0] = 0;
 
-//////////////////////////////////////////////////////////// FIM DA BASE DE DADOS ////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////// FIM DA BASE DE DADOS ////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////// VARIÁVEIS //////////////////////////////////////////////////////////////////
 
-    /////////////////////////// OPERAÇÕES //////////////////////////
+    ///////////////////////////////////////////////////////////////// VARIÁVEIS //////////////////////////////////////////////////////////////////
 
-    int op1;
-    int op2;
+    float exibeMedia = media(notasPT, notasING, notasAI, notasTIC, notasEF, notasFQ, notasMAT, notasMA, notasRE, notasPRO, notasEMR);
 
-    //////////////////////////// MÉDIAS ////////////////////////////
-
-    float media_PT = mediaPT(notasPT);
-    float media_ING = mediaING(notasING);
-
-///////////////////////////////////////////////////////////// MENU DE OPERAÇÕES //////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////// MENU DE OPERAÇÕES //////////////////////////////////////////////////////////////
 
     do {
         cout << "INOVAR 2.0" << endl << endl;
@@ -273,55 +318,55 @@ int main() {
         cin >> op1;
 
         switch (op1) {
-            case 1:
-                do {
-                    cout << "MÉDIA:" << endl << endl;
+        case 1:
+            do {
+                cout << "MEDIA:" << endl << endl;
 
-                    cout << " 0 - VOLTAR;" << endl << endl;
-                    cout << " 1 - TODAS;" << endl;
-                    cout << " 2 - PORTUGUES;" << endl;
-                    cout << " 3 - INGLES;" << endl;
-                    cout << " 4 - AREA DE INTEGRACAO;" << endl;
-                    cout << " 5 - TECNOLOGIAS DE INFORMACAO E COMUNICACAO;" << endl;
-                    cout << " 6 - EDUCACAO FISICA;" << endl;
-                    cout << " 7 - FISICA E QUIMICA;" << endl;
-                    cout << " 8 - MATEMATICA;" << endl;
-                    cout << " 9 - MICROPROCESSADORES E AUTOMACAO;" << endl;
-                    cout << "10 - REDES;" << endl;
-                    cout << "11 - PROGRAMACAO;" << endl;
-                    cout << "12 - EDUCACAO MORAL RELIGIOSA;" << endl << endl;
+                cout << " 0 - VOLTAR;" << endl << endl;
+                cout << " 1 - TODAS;" << endl;
+                cout << " 2 - PORTUGUES;" << endl;
+                cout << " 3 - INGLES;" << endl;
+                cout << " 4 - AREA DE INTEGRACAO;" << endl;
+                cout << " 5 - TECNOLOGIAS DE INFORMACAO E COMUNICACAO;" << endl;
+                cout << " 6 - EDUCACAO FISICA;" << endl;
+                cout << " 7 - FISICA E QUIMICA;" << endl;
+                cout << " 8 - MATEMATICA;" << endl;
+                cout << " 9 - MICROPROCESSADORES E AUTOMACAO;" << endl;
+                cout << "10 - REDES;" << endl;
+                cout << "11 - PROGRAMACAO;" << endl;
+                cout << "12 - EDUCACAO MORAL RELIGIOSA;" << endl << endl;
 
-                    cout << "R: ";
-                    cin >> op2;
+                cout << "R: ";
+                cin >> op2;
 
-                    switch (op2) {
-
-                    ////////////////////////////////// VOLTAR /////////////////////////////////
-                    case 0:
-                        return 0;
+                switch (op2) {
 
                     ////////////////////////////// TODAS AS MEDIAS ////////////////////////////
-                    case 1:
+                case 1:
                     // TODAS AS MEDIAS
 
                     //////////////////////////// MEDIA DE PORTUGUES ///////////////////////////
-                    case 2:
-                        system("cls");
+                case 2:
+                    system("cls");
 
-                        if (media_PT >= 0) {
-                            cout << "MEDIA DE PORTUGUES: " << media_PT << endl;
-                        }
+                    if (exibeMedia >= 0) {
+                        cout << "MEDIA DE PORTUGUES: " << exibeMedia << endl;
+                    }
+
+                    break;
 
                     ///////////////////////////// MEDIA DE INGLES /////////////////////////////
-                    case 3:
-                        system("cls");
+                case 3:
+                    system("cls");
 
-                        if (media_ING >= 0) {
-                            cout << "MEDIA DE INGLES: " << media_ING << endl;
-                        }
+                    if (exibeMedia >= 0) {
+                        cout << "MEDIA DE INGLES: " << exibeMedia << endl;
                     }
-             
-                } while (op2 != 0);
+
+                    break;
+                }
+
+            } while (op2 != 0);
         }
 
     } while (op1 != 0);
